@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewpoint" content="width=device-width, initial-scale=1">
+  <title>Lil Piggies</title>
+  <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+        <img id="crate" src="assets/crate.jpg">
+        <img id="earth" src="assets/earth-sphere.jpg">
+        <img id="grass" src="assets/grass.jpg">
+        <!--Sky Credit: https://www.youtube.com/watch?v=2nvpP55uDoQ&ab_channel=AAVFX-->
+        <img id="neonsky" src="assets/neonsky.jpg">
+        <img id="NDObox" src="assets/NdoBox.jpg">
+        <img id="hexa" src="assets/hexagons.png">
+        <!--Roofing Credit: https://www.accurateroofing.com/Roofing-->
+        <img id="roofing" src="assets/roofing.jpg">
+        <!--Wood Credit: https://www.pinterest.com/pin/739012620085095836/-->
+        <img id="wood" src="assets/seamless wood.jpg">
+        <img id="stars" src="assets/stars.jpg">
+        <!--Window Credit: https://johnjayrec.nyc/pyj_frame/window-frame-texture/-->
+        <img id="window" src="assets/window.jpg">
+        <!--Tree Bark Credit: https://www.pinterest.com/pin/557250153875109520/-->
+        <img id="bark" src="assets/tree.jpg">
+        <!--Tree Leave Credit: https://www.twenty20.com/photos/0383e8c3-586c-41b6-9aeb-892820ce615f-->
+        <img id="leaves" src="assets/leaves.jpg">
+        <!--Pebble Texture Credit: https://www.pinterest.com/pin/446630488021550202/-->
+        <img id="pebble" src="assets/pebble.jpg">
+        <!--Stick Texture Credit: https://www.dreamstime.com/photos-images/stick-texture.html-->
+        <img id="stick" src="assets/stick.jpg">
+        <!-- Straw Texture Credit: http://bgfons.com/download/1895-->
+        <img id="straw" src="assets/straw.jpg">
+        <!--Brick Texture Credit: https://www.pinterest.com/pin/431078995573218874/-->
+        <img id="brick" src="assets/brick.jpg">
+        <!--Sky texture Credit: https://freestocktextures.com/photos-sky/-->
+        <img id="sky" src="assets/sky.jpg">
+        <img id="code" src="assets/code.PNG">
+        <img id="outside" src="assets/monitor.jpg">
+
+    </a-assets>
+    <!--Ground & Sky-->
+    <a-plane src="#grass" rotation="-90 0 0" scale="1000 1000 1"></a-plane>
+    <a-box src="#pebble" rotation="0 0 0" position="0 -.03 -5" height = .1 depth="25" width="4">
+      <a-box width=10 depth = 15 height=.1 position="0 0 -20" src="#pebble"></a-box>
+    </a-box>
+    <a-sky src="#sky"></a-sky>
+    <!--Trees-->
+    <a-cylinder src="#bark" radius=".5" height = 6 position="-6 3 -6">
+      <a-cone src="#leaves" radius-bottom ="2.5" height=6  position="0 2 0"></a-cone>
+    </a-cylinder>
+    <a-cylinder src="#bark" radius=".5" height = 6 position="6 3 -6">
+      <a-cone src="#leaves" radius-bottom ="2.5" height=6  position="0 2 0"></a-cone>
+    </a-cylinder>
+    <a-cylinder src="#bark" radius=".5" height = 6 position="6 3 -12">
+      <a-cone src="#leaves" radius-bottom ="2.5" height=6  position="0 2 0"></a-cone>
+    </a-cylinder>
+    <a-cylinder src="#bark" radius=".5" height = 6 position="-6 3 -12">
+      <a-cone src="#leaves" radius-bottom ="2.5" height=6  position="0 2 0"></a-cone>
+    </a-cylinder>
+    <!--House #1-->
+    <a-box height = 4 width = 3.5 depth=.5 position="3 2 -32.75" src="#stick">
+    <a-box height = 4 width = 3.5 depth=.5 position="-6 0 0" src="#stick"></a-box>
+    <a-box height = 4 width = 9.5 depth=.5 position="-3 0 -4" src="#stick"></a-box>
+    <a-box height = 2 width = 2.5 depth=.5 position="-3 1 0" src="#stick"></a-box>
+    <a-box height = 2 width = 1.25 depth=.5 position="-4 -1 .375" rotation="0 90 0" src="#stick"></a-box>
+    <a-box height = 2 width = 1.25 depth=.5 position="-2 -1 .375" rotation="0 90 0" src="#stick"></a-box>
+    <a-box height = 4 width = 3.5 depth=.5 position="1.5 0 -2" rotation="0 90 0" src="#stick"></a-box>
+    <a-box height = 4 width = 3.5 depth=.5 position="-7.5 0 -2" rotation="0 90 0" src="#stick"></a-box>
+    <a-box height = .5 width = 9 depth = 3.5 position ="-3 1.75 -2" rotation="0 0 0" src="#stick"></a-box>
+    <a-box height = 4 width = 10 depth = .5 position="-3 3 -.5" rotation="-45 0 0" src="#stick"></a-box>
+    <a-box height = 4 width = 10 depth = .5 position="-3 3 -3.5" rotation="45 0 0" src="#stick"></a-box>
+    <a-box height= 1 width= 1.5 depth=.01 position="-6 .5 -.25" src="#outside" ></a-box>
+    <a-box height= 1 width= 1.5 depth=.01 position="0 .5 -.25" src="#code" ></a-box>
+    </a-box>
+    <!--House #2-->
+    <a-box height = 4 width = 3.5 depth=.5 position="-5.25 2 -29" rotation="0 90 0" src="#straw">
+      <a-box height = 4 width = 3.5 depth=.5 position="-6 0 0" src="#straw"></a-box>
+      <a-box height = 4 width = 9.5 depth=.5 position="-3 0 -4" src="#straw"></a-box>
+      <a-box height = 2 width = 2.5 depth=.5 position="-3 1 0" src="#straw"></a-box>
+      <a-box height = 2 width = 1.25 depth=.5 position="-4 -1 .375" rotation="0 90 0" src="#straw"></a-box>
+      <a-box height = 2 width = 1.25 depth=.5 position="-2 -1 .375" rotation="0 90 0" src="#straw"></a-box>
+      <a-box height = 4 width = 3.5 depth=.5 position="1.5 0 -2" rotation="0 90 0" src="#straw"></a-box>
+      <a-box height = 4 width = 3.5 depth=.5 position="-7.5 0 -2" rotation="0 90 0" src="#straw"></a-box>
+      <a-box height = .5 width = 9 depth = 3.5 position ="-3 1.75 -2" rotation="0 0 0" src="#straw"></a-box>
+      <a-box height = 4 width = 10 depth = .5 position="-3 3 -.5" rotation="-45 0 0" src="#straw"></a-box>
+      <a-box height = 4 width = 10 depth = .5 position="-3 3 -3.5" rotation="45 0 0" src="#straw"></a-box>
+      </a-box>
+    <!--House #3-->
+    <a-box height = 4 width = 3.5 depth=.5 position="5.25 2 -23" rotation="0 270 0" src="#brick">
+      <a-box height = 4 width = 3.5 depth=.5 position="-6 0 0" src="#brick"></a-box>
+      <a-box height = 4 width = 9.5 depth=.5 position="-3 0 -4" src="#brick"></a-box>
+      <a-box height = 2 width = 2.5 depth=.5 position="-3 1 0" src="#brick"></a-box>
+      <a-box height = 2 width = 1.25 depth=.5 position="-4 -1 .375" rotation="0 90 0" src="#brick"></a-box>
+      <a-box height = 2 width = 1.25 depth=.5 position="-2 -1 .375" rotation="0 90 0" src="#brick"></a-box>
+      <a-box height = 4 width = 3.5 depth=.5 position="1.5 0 -2" rotation="0 90 0" src="#brick"></a-box>
+      <a-box height = 4 width = 3.5 depth=.5 position="-7.5 0 -2" rotation="0 90 0" src="#brick"></a-box>
+      <a-box height = .5 width = 9 depth = 3.5 position ="-3 1.75 -2" rotation="0 0 0" src="#brick"></a-box>
+      <a-box height = 4 width = 10 depth = .5 position="-3 3 -.5" rotation="-45 0 0" src="#brick"></a-box>
+      <a-box height = 4 width = 10 depth = .5 position="-3 3 -3.5" rotation="45 0 0" src="#brick"></a-box>
+      <a-box height = .5 width = 1.25 depth = 1 position="2.3 0 -2" src="#brick">
+        <a-box height = 3 width = 1 depth = .25 position=".50 1.75 0" src="#brick" rotation="0 90 0">
+        <a-cylinder height = .75 radius = .05 position=".25 1.5 0" src="#brick"></a-cylinder>
+        <a-cylinder height = .75 radius = .05 position="-.25 1.5 0" src="#brick"></a-cylinder>
+      </a-box></a-box>
+      </a-box>
+
+  </a-scene>
+</body>
+</html>
